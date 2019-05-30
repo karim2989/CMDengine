@@ -10,6 +10,8 @@ namespace CMDengine
             switch (user_input)
             {
                 case "quit": { Environment.Exit(0); } break;
+                case "CMDquit": { Environment.Exit(0); } break;
+                case "CMDstatus": { System.Console.WriteLine(DataContainer.Status); } break;
             }
             //Enteraction responses
             foreach (Response R in interaction_responses)

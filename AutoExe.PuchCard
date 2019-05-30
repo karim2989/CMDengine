@@ -1,0 +1,8 @@
+FileInfo~test punch card|karim2989;
+R|0~fine|1;
+R|1~ok|2;
+R|2~yes|2;
+R|3~no thanks|2;
+I|0~How are you doing?|0,1;
+I|1~ok then do you want a drink?|2,3;
+I|2~this application is done you can leave now.|1

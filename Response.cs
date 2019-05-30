@@ -3,23 +3,20 @@ namespace CMDengine
 {
     struct Response
     {
-        public Response(string i_argument, Action i_action, Interaction i_interaction)
+        public Response(string i_argument, int i_interaction_id)
         {
             argument = i_argument;
-            OnExecute = i_action;
-            Next_Interaction = i_interaction;
+            Next_Interaction = i_interaction_id;
         }
         public void Execute()
         {
-            OnExecute();
-            Next_Interaction.Execute();
+            DataContainer.GetInteraction(Next_Interaction).Execute();
         }
         public string Argument
         {
             get { return argument; }
         }
         private string argument;
-        private Action OnExecute;
-        private Interaction Next_Interaction;
+        private int Next_Interaction;
     }
 }
